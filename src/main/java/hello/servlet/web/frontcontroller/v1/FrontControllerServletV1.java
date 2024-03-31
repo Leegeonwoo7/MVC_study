@@ -31,6 +31,7 @@ public class FrontControllerServletV1 extends HttpServlet {
 
         //요청 URL을 받아 인터페이스 객체를 이용하여 동적으로 할당
         String requestURI = request.getRequestURI();
+        System.out.println("requestURI = " + requestURI);
 
         ControllerV1 controller = controllerMap.get(requestURI);
         if(controller == null){
